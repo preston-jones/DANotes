@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "danotes-5616c": {
+      "hosting": {
+        "danotes": [
+          "danotes-5616c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "danotes-5616c"
+  }
+}
