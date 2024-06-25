@@ -33,9 +33,9 @@
                     </g>
                 </svg>
                 }
-
                 <p>All</p>
             </button>
+
             <button (click)="changeFavFilter('fav')" [disabled]="status == 'trash'" class="btn light_btn"
                 [ngClass]="{'btn_active': favFilter == 'fav'}">
 
@@ -69,12 +69,10 @@
                     </g>
                 </svg>
                 }
-
-
-
                 <p>Favorites</p>
             </button>
         </div>
+
         <div>
             <button (click)="changeTrashStatus()" class="white_btn_round "
                 [ngClass]="{'back_arrow_active': status == 'trash', 'back_arrow_inactive': status != 'trash'}">
@@ -125,24 +123,12 @@
                     </g>
                 </svg>
                 }
-
-
-
                 <p>Trash</p>
             </button>
         </div>
     </div>
+
     <div>
-        <ul>
-            @for (item of (this.noteService.items$ | async); track item) {
-              <li>
-                {{ item['title'] }}
-              </li>
-            }
-          </ul>
-        
-        <!-- @for (note of noteList; track note) {
-            <app-note [note]="note"></app-note>
-          } -->
+        <app-note *ngFor="let note of getList()" [note]="note"></app-note>
     </div>
 </div>
