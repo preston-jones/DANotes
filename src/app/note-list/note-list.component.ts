@@ -23,7 +23,8 @@ export class NoteListComponent {
   }
 
   getList(): Note[]{
-    console.log(this.noteService.normalNotes);
+    console.log("normal Notes:", this.noteService.normalNotes);
+    console.log("trash Notes:", this.noteService.trashNotes);
     
     if(this.status == "notes"){
       if (this.favFilter == "all") {
